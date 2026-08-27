@@ -26,12 +26,13 @@ cask "milmil" do
   ]
 
   caveats <<~EOS
-    milmil is ad-hoc signed and not notarized. On first launch macOS will
-    block it; either reinstall with
+    milmil is ad-hoc signed and not notarized, so macOS blocks the first
+    launch. Right-click milmil.app and choose Open (on newer macOS:
+    System Settings > Privacy & Security > Open Anyway), or clear the flag
+    yourself:
 
-      brew install --cask --no-quarantine milmil-dev/milmil/milmil
+      xattr -d com.apple.quarantine /Applications/milmil.app
 
-    or right-click milmil.app and choose Open (on newer macOS:
-    System Settings > Privacy & Security > Open Anyway).
+    Homebrew's --no-quarantine option was removed in Homebrew 6.
   EOS
 end
