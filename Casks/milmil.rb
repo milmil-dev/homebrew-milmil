@@ -1,6 +1,6 @@
 cask "milmil" do
-  version "0.1.20"
-  sha256 "459978006508425b617643927dd949dba3507bb0f640c26f67b1b539ceeb7e96"
+  version "0.1.21"
+  sha256 "22192ac3595b13b472a537aae2975c66737a9f56840fb1af8698bab1b90816dd"
 
   url "https://github.com/milmil-dev/milmil/releases/download/v#{version}/milmil-macos-#{version}.dmg"
   name "milmil"
